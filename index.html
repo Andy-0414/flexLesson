@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <title>FLEX</title>
+</head>
+
+<body>
+    <section class="panel">
+        <div class="example">
+            <div class="body">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+        </div>
+        <div class="code">
+            <h1>HTML</h1>
+            <pre><code class="html">&lt;div class="body"&gt;
+    &lt;div class="box"&gt;1&lt;/div&gt;
+    &lt;div class="box"&gt;2&lt;/div&gt;
+    &lt;div class="box"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h1>CSS</h1>
+            <pre>
+.body{
+    <b>width</b>: 100%;
+    <b>height</b>: 100%;
+
+    <b>border</b>: 2px solid black;
+    <mark>
+    <b>display</b>: flex;
+    <b>flex-direction</b>: <span id="direction">row</span>;
+    <b>justify-content</b>: <span id="justify">center</span>;
+    <b>align-items</b>: <span id="align">center</span>;</mark>
+}
+.box{
+    <b>width</b>: 100px;
+    <b>height</b>: 100px;
+
+    <b>border</b>: 1px solid #36afff;
+    <b>color</b>: #36afff;
+
+    <b>display</b>: flex;
+    <b>justify-content</b>: center;
+    <b>align-items</b>: center;
+}
+</pre>
+        </div>
+        <div class="controller">
+            <div class="controller__radio">
+                <h1>justify-content</h1>
+                <label><input type="radio" name="justify-content" value="center" checked> <span></span> center</label>
+                <label><input type="radio" name="justify-content" value="flex-start"> <span></span> flex-start</label>
+                <label><input type="radio" name="justify-content" value="flex-end"> <span></span> flex-end</label>
+                <label><input type="radio" name="justify-content" value="space-around"> <span></span>
+                    space-around</label>
+                <label><input type="radio" name="justify-content" value="space-between"> <span></span>
+                    space-between</label>
+            </div>
+            <div class="controller__radio">
+                <h1>align-items</h1>
+                <label><input type="radio" name="align-items" value="center" checked> <span></span> center</label>
+                <label><input type="radio" name="align-items" value="flex-start"> <span></span> flex-start</label>
+                <label><input type="radio" name="align-items" value="flex-end"> <span></span> flex-end</label>
+                <label><input type="radio" name="align-items" value="space-around"> <span></span>
+                    space-around</label>
+                <label><input type="radio" name="align-items" value="space-between"> <span></span>
+                    space-between</label>
+            </div>
+            <div class="controller__radio">
+                <h1>flex-direction</h1>
+                <label><input type="radio" name="flex-direction" value="row" checked> <span></span> row</label>
+                <label><input type="radio" name="flex-direction" value="column"> <span></span> column</label>
+                <label><input type="radio" name="flex-direction" value="row-reverse"> <span></span> row-reverse</label>
+                <label><input type="radio" name="flex-direction" value="column-reverse"> <span></span>
+                    column-reverse</label>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
