@@ -18,7 +18,7 @@ var justifyResult = "center"
 var alignResult = "center"
 var wrapResult = "wrap"
 
-var currentIdx = 3
+var currentIdx = 2
 
 function setHtmlCode() {
     var str = ""
@@ -26,19 +26,24 @@ function setHtmlCode() {
         str += `    &lt;<b>div</b> class="box"&gt;${i}&lt;/<b>div</b>&gt;`
         if (i != currentIdx) str += "\n"
     }
+    console.log(str)
     boxList.innerHTML = str
 }
 append.addEventListener("click", e => {
-    var div = document.createElement("div")
-    div.classList.add("box")
-    div.innerText = ++currentIdx;
-    body.appendChild(div)
-    setHtmlCode()
+    if (currentIdx < 10) {
+        var div = document.createElement("div")
+        div.classList.add("box")
+        div.innerText = ++currentIdx;
+        body.appendChild(div)
+        setHtmlCode()
+    }
 })
 remove.addEventListener("click", e => {
-    currentIdx--
-    body.removeChild(body.lastChild)
-    setHtmlCode()
+    if (currentIdx > 2) {
+        currentIdx--
+        body.removeChild(body.lastChild)
+        setHtmlCode()
+    }
 })
 
 
