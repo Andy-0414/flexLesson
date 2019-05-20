@@ -26,7 +26,6 @@ function setHtmlCode() {
         str += `    &lt;<b>div</b> class="box"&gt;${i}&lt;/<b>div</b>&gt;`
         if (i != currentIdx) str += "\n"
     }
-    console.log(str)
     boxList.innerHTML = str
 }
 append.addEventListener("click", e => {
